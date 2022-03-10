@@ -274,7 +274,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
 
 ```{r}
 data(mpg)
-# violin plot with 7 colors, sprint palette only have six colors add one more
+# violin plot with 7 colors, Spring palette only have six colors add one more
 ggplot(mpg, aes(x=class, y=hwy, fill=class)) + 
   geom_violin() +
   theme_classic() +

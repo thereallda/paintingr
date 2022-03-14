@@ -12,10 +12,10 @@ painting_palettes <- list(
   "Ophelia" = c("#736B29", "#AE9477", "#56714C", "#59587F", "#c88B91"),
   "Kitchen" = c("#B81319", "#9C5C03", "#82A348", "#E9DB81", "#275F80"),
   "Spring" = c("#285786", "#8EA9BF", "#396E4A", "#90AC70", "#E17C6B", "#EFC3A4"),
-  "Starrynight" = c("#17435F", "#4B86B2", "#78B3BE", "#F1EB93", "#BECC6C"),
   "Strawberries" = c("#97351D", "#B95A35", "#DDAC84", "#CDBB9F", "#706859"),
   "Seascape" = c("#114A79", "#4086AF", "#AFD2E0", "#ADCABB", "#689C9A"),
-  "Twilight" = c("#13559F", "#599AB7", "#A9C4B4", "#FFCC48", "#DF832C", "#A83C1E")
+  "Twilight" = c("#13559F", "#599AB7", "#A9C4B4", "#FFCC48", "#DF832C", "#A83C1E"),
+  "Abstract" = c("#211F1E", "#57575C", "#A9A9A0", "#9D897D", "#9E8553")
 
 )
 
@@ -24,8 +24,8 @@ painting_palettes <- list(
 #' @param name Name of desired palette. Choice are:
 #'     \code{Pearlgirl}, \code{Splash}, \code{Autumn},
 #'     \code{Villeneuve}, \code{Ophelia}, \code{Kitchen},
-#'     \code{Spring}, \code{Starrynight}, \code{Strawberries},
-#'     \code{Seascape}, \code{Twilight}
+#'     \code{Spring}, \code{Strawberries}, \code{Seascape},
+#'     \code{Twilight}, \code{Abstract}
 #'
 #' @param n Number of colors you want.
 #'

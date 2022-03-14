@@ -6,10 +6,22 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of paintingr is to provide a set of palettes from paintings.
+> “The greatest value of a picture is when it forces us to notice what
+> we never expected to see.” - John Tukey
+
+Color is one of the most important attributes of a figure. Dedicated
+choice of color can help us deliver our idea more vividly.
+
+------------------------------------------------------------------------
+
+The goal of `paintingr` is to provide a set of palettes from paintings.
 
 Structure of the package was based on coding from the
 [wesanderson](https://github.com/karthik/wesanderson) packages.
+
+Some palettes derived from
+[三三两两的色盘](https://www.xiaohongshu.com/user/profile/5b5f7d724eacab10606aa72a?xhsshare=CopyLink&appuid=5af1b353f7e8b957de93044a&apptime=1647258634)
+.
 
 ## Installation
 

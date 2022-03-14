@@ -160,6 +160,9 @@ paint_palette("Abstract")
 
 ### Heatmap
 
+Use `type="continuous"` to automatically interpolate between colors if
+you want more colors than the palette can offer (n \> 5/6).
+
 ``` r
 library(ggplot2)
 # Dummy data

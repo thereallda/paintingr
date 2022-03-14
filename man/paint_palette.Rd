@@ -10,8 +10,8 @@ paint_palette(name, n, type = c("discrete", "continuous"))
 \item{name}{Name of desired palette. Choice are:
 \code{Pearlgirl}, \code{Splash}, \code{Autumn},
 \code{Villeneuve}, \code{Ophelia}, \code{Kitchen},
-\code{Spring}, \code{Starrynight}, \code{Strawberries},
-\code{Seascape}, \code{Twilight}}
+\code{Spring}, \code{Strawberries}, \code{Seascape},
+\code{Twilight}, \code{Abstract}}
 
 \item{n}{Number of colors you want.}
 

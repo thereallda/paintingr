@@ -110,17 +110,6 @@ paint_palette("Spring")
 
 <img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
 
-### Starrynight
-
-Starry Night Over the Rhône - Vincent van Gogh (1888),
-[Source](https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne)
-
-``` r
-paint_palette("Starrynight")
-```
-
-<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
-
 ### Strawberries
 
 Strawberries - Édouard Manet (1882),
@@ -130,7 +119,7 @@ Strawberries - Édouard Manet (1882),
 paint_palette("Strawberries")
 ```
 
-<img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
 
 ### Seascape
 
@@ -141,7 +130,7 @@ Seascape at Saintes-Maries - Vincent van Gogh (1888),
 paint_palette("Seascape")
 ```
 
-<img src="man/figures/README-unnamed-chunk-23-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
 
 ### Twilight
 
@@ -150,6 +139,17 @@ Twilight, Venice - Claude Monet (1908),
 
 ``` r
 paint_palette("Twilight")
+```
+
+<img src="man/figures/README-unnamed-chunk-23-1.png" width="100%" />
+
+### Abstract
+
+Abstract Composition - Jessica Dismorr (1915),
+[Source](https://www.tate.org.uk/art/artworks/dismorr-abstract-composition-t01084)
+
+``` r
+paint_palette("Abstract")
 ```
 
 <img src="man/figures/README-unnamed-chunk-25-1.png" width="100%" />
@@ -220,3 +220,14 @@ ggplot(mpg, aes(x=class, y=hwy, fill=class)) +
 ```
 
 <img src="man/figures/README-unnamed-chunk-29-1.png" width="100%" />
+
+### Barplot
+
+``` r
+ggplot(mpg, aes(x = class, fill = drv)) + 
+  geom_bar() +
+  theme_classic() +
+  scale_fill_manual(values = paint_palette("Ophelia"))
+```
+
+<img src="man/figures/README-unnamed-chunk-30-1.png" width="100%" />

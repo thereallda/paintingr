@@ -158,21 +158,6 @@ plot(paint,axes=FALSE,xlab="",ylab="")
 paint_palette("Spring")
 ```
 
-### Starrynight
-
-Starry Night Over the Rhône - Vincent van Gogh (1888), [Source](https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne)
-
-```{r, eval=FALSE}
-paint_palette("Starrynight")
-```
-
-```{r, echo=FALSE}
-paint <- load.image("img/Starry_Night_Over_the_Rhone.jpg")
-par(mai=rep(0,4))
-layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
-plot(paint,axes=FALSE,xlab="",ylab="")
-paint_palette("Starrynight")
-```
 
 ### Strawberries
 
@@ -221,6 +206,23 @@ layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
 plot(paint,axes=FALSE,xlab="",ylab="")
 paint_palette("Twilight")
 ```
+
+### Abstract
+
+Abstract Composition - Jessica Dismorr (1915), [Source](https://www.tate.org.uk/art/artworks/dismorr-abstract-composition-t01084)
+
+```{r, eval=FALSE}
+paint_palette("Abstract")
+```
+
+```{r, echo=FALSE}
+paint <- load.image("img/T01084_10.jpg")
+par(mai=rep(0,4))
+layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
+plot(paint,axes=FALSE,xlab="",ylab="")
+paint_palette("Abstract")
+```
+
 
 ## Examples
 
@@ -279,4 +281,13 @@ ggplot(mpg, aes(x=class, y=hwy, fill=class)) +
   geom_violin() +
   theme_classic() +
   scale_fill_manual(values = c(paint_palette("Spring", n=6), "black"))
+```
+
+### Barplot
+
+```{r}
+ggplot(mpg, aes(x = class, fill = drv)) + 
+  geom_bar() +
+  theme_classic() +
+  scale_fill_manual(values = paint_palette("Ophelia"))
 ```

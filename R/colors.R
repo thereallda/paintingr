@@ -26,7 +26,7 @@ painting_palettes <- list(
 #'     \code{Pearlgirl}, \code{Splash}, \code{Autumn},
 #'     \code{Villeneuve}, \code{Ophelia}, \code{Kitchen},
 #'     \code{Spring}, \code{Strawberries}, \code{Seascape},
-#'     \code{Twilight}, \code{Abstract}
+#'     \code{Twilight}, \code{Abstract}, \code{Vesuvius}
 #'
 #' @param n Number of colors you want.
 #'

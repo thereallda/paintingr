@@ -15,7 +15,8 @@ painting_palettes <- list(
   "Strawberries" = c("#97351D", "#B95A35", "#DDAC84", "#CDBB9F", "#706859"),
   "Seascape" = c("#114A79", "#4086AF", "#AFD2E0", "#ADCABB", "#689C9A"),
   "Twilight" = c("#13559F", "#599AB7", "#A9C4B4", "#FFCC48", "#DF832C", "#A83C1E"),
-  "Abstract" = c("#211F1E", "#57575C", "#A9A9A0", "#9D897D", "#9E8553")
+  "Abstract" = c("#211F1E", "#57575C", "#A9A9A0", "#9D897D", "#9E8553"),
+  "Vesuvius" = c("#000000","#191919","#C35743","#FEB24C")
 
 )
 

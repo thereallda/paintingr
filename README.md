@@ -166,6 +166,17 @@ paint_palette("Abstract")
 
 <img src="man/figures/README-unnamed-chunk-25-1.png" width="100%" />
 
+### Vesuivus
+
+Vesuvius in Eruption - Joseph Wright of Derby (1776-1780),
+[Source](https://www.bl.uk/collection-items/vesuvius-in-eruption)
+
+``` r
+paint_palette("Vesuvius")
+```
+
+<img src="man/figures/README-unnamed-chunk-27-1.png" width="100%" />
+
 ## Examples
 
 `ggplot2`-based examples
@@ -193,7 +204,20 @@ ggplot(data, aes(X, Y, fill= Z)) +
   coord_equal() 
 ```
 
-<img src="man/figures/README-unnamed-chunk-26-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-28-1.png" width="100%" />
+
+``` r
+# Heatmap with palette of "Vesuvius" 
+pal2 <- paint_palette("Vesuvius", n=100, type="continuous")
+ggplot(data, aes(X, Y, fill= Z)) + 
+  geom_tile() + 
+  scale_fill_gradientn(colours = pal2) + 
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) + 
+  coord_equal() 
+```
+
+<img src="man/figures/README-unnamed-chunk-29-1.png" width="100%" />
 
 ### Boxplot
 
@@ -208,7 +232,7 @@ ggplot(iris, aes(Species, Sepal.Length)) +
   scale_fill_manual(values = paint_palette("Villeneuve"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-27-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-30-1.png" width="100%" />
 
 ### Scatter
 
@@ -221,7 +245,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
   scale_color_manual(values = paint_palette("Kitchen"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-28-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-31-1.png" width="100%" />
 
 ### Violin plot
 
@@ -234,7 +258,7 @@ ggplot(mpg, aes(x=class, y=hwy, fill=class)) +
   scale_fill_manual(values = c(paint_palette("Spring", n=6), "black"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-29-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-32-1.png" width="100%" />
 
 ### Barplot
 
@@ -245,4 +269,4 @@ ggplot(mpg, aes(x = class, fill = drv)) +
   scale_fill_manual(values = paint_palette("Ophelia"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-30-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-33-1.png" width="100%" />

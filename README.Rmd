@@ -230,6 +230,23 @@ plot(paint,axes=FALSE,xlab="",ylab="")
 paint_palette("Abstract")
 ```
 
+### Vesuivus
+
+Vesuvius in Eruption - Joseph Wright of Derby (1776-1780), [Source](https://www.bl.uk/collection-items/vesuvius-in-eruption)
+
+```{r, eval=FALSE}
+paint_palette("Vesuvius")
+```
+
+```{r, echo=FALSE}
+paint <- load.image("img/Vesuvius_in_Eruption.jpg")
+par(mai=rep(0,4))
+layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
+plot(paint,axes=FALSE,xlab="",ylab="")
+paint_palette("Vesuvius")
+```
+
+
 ## Examples
 
 `ggplot2`-based examples
@@ -251,6 +268,17 @@ pal <- paint_palette("Autumn", n=100, type="continuous")
 ggplot(data, aes(X, Y, fill= Z)) + 
   geom_tile() + 
   scale_fill_gradientn(colours = pal) + 
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) + 
+  coord_equal() 
+```
+
+```{r}
+# Heatmap with palette of "Vesuvius" 
+pal2 <- paint_palette("Vesuvius", n=100, type="continuous")
+ggplot(data, aes(X, Y, fill= Z)) + 
+  geom_tile() + 
+  scale_fill_gradientn(colours = pal2) + 
   scale_x_discrete(expand = c(0, 0)) +
   scale_y_discrete(expand = c(0, 0)) + 
   coord_equal() 

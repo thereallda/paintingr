@@ -5,3 +5,5 @@
 ^README.md$
 ^.*\.Rproj$
 img/
+^cran-comments.md$
+^revdep$

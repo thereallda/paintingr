@@ -33,9 +33,15 @@ Some palettes derived from [三三两两的色盘](https://www.xiaohongshu.com/u
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the `paintingr` with:
 
-``` r
+```{r,eval=FALSE}
+install.packages('paintingr')
+```
+
+Or the development version from [GitHub](https://github.com/) with:
+
+```{r,eval=FALSE}
 # install.packages("devtools")
 devtools::install_github("thereallda/paintingr")
 ```

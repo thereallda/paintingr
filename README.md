@@ -25,8 +25,13 @@ Some palettes derived from
 
 ## Installation
 
-You can install the development version from
-[GitHub](https://github.com/) with:
+You can install the `paintingr` with:
+
+``` r
+install.packages('paintingr')
+```
+
+Or the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -41,7 +46,7 @@ library(paintingr)
 display_all_palettes()
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ## Palettes
 
@@ -54,7 +59,7 @@ Girl with a Pearl Earring - Johannes Vermeer (1665),
 paint_palette("Pearlgirl")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 ### Splash
 
@@ -65,7 +70,7 @@ A Bigger Splash - David Hockney (1967),
 paint_palette("Splash")
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
 
 ### Autumn
 
@@ -76,7 +81,7 @@ Autumn at Oirase - Kawase Hasui (1933),
 paint_palette("Autumn")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
 
 ### Villeneuve
 
@@ -87,7 +92,7 @@ Matin à Villeneuve - Henri Biva (1905),
 paint_palette("Villeneuve")
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
 
 ### Ophelia
 
@@ -98,7 +103,7 @@ Ophelia - John Everett Millais (1851-1852),
 paint_palette("Ophelia")
 ```
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
 
 ### Kitchen
 
@@ -109,7 +114,7 @@ Kitchen (Detail 2) - Liza Lou (1991–1996),
 paint_palette("Kitchen")
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
 
 ### Spring
 
@@ -120,7 +125,7 @@ SPRING BY THE SEINE - Claude Monet (1875),
 paint_palette("Spring")
 ```
 
-<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
 
 ### Strawberries
 
@@ -131,7 +136,7 @@ Strawberries - Édouard Manet (1882),
 paint_palette("Strawberries")
 ```
 
-<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
 
 ### Seascape
 
@@ -142,7 +147,7 @@ Seascape at Saintes-Maries - Vincent van Gogh (1888),
 paint_palette("Seascape")
 ```
 
-<img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-23-1.png" width="100%" />
 
 ### Twilight
 
@@ -153,7 +158,7 @@ Twilight, Venice - Claude Monet (1908),
 paint_palette("Twilight")
 ```
 
-<img src="man/figures/README-unnamed-chunk-23-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-25-1.png" width="100%" />
 
 ### Abstract
 
@@ -164,7 +169,7 @@ Abstract Composition - Jessica Dismorr (1915),
 paint_palette("Abstract")
 ```
 
-<img src="man/figures/README-unnamed-chunk-25-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-27-1.png" width="100%" />
 
 ### Vesuivus
 
@@ -175,7 +180,7 @@ Vesuvius in Eruption - Joseph Wright of Derby (1776-1780),
 paint_palette("Vesuvius")
 ```
 
-<img src="man/figures/README-unnamed-chunk-27-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-29-1.png" width="100%" />
 
 ## Examples
 
@@ -204,7 +209,7 @@ ggplot(data, aes(X, Y, fill= Z)) +
   coord_equal() 
 ```
 
-<img src="man/figures/README-unnamed-chunk-28-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-30-1.png" width="100%" />
 
 ``` r
 # Heatmap with palette of "Vesuvius" 
@@ -217,7 +222,7 @@ ggplot(data, aes(X, Y, fill= Z)) +
   coord_equal() 
 ```
 
-<img src="man/figures/README-unnamed-chunk-29-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-31-1.png" width="100%" />
 
 ### Boxplot
 
@@ -232,7 +237,7 @@ ggplot(iris, aes(Species, Sepal.Length)) +
   scale_fill_manual(values = paint_palette("Villeneuve"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-30-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-32-1.png" width="100%" />
 
 ### Scatter
 
@@ -245,7 +250,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
   scale_color_manual(values = paint_palette("Kitchen"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-31-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-33-1.png" width="100%" />
 
 ### Violin plot
 
@@ -258,7 +263,7 @@ ggplot(mpg, aes(x=class, y=hwy, fill=class)) +
   scale_fill_manual(values = c(paint_palette("Spring", n=6), "black"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-32-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-34-1.png" width="100%" />
 
 ### Barplot
 
@@ -269,4 +274,4 @@ ggplot(mpg, aes(x = class, fill = drv)) +
   scale_fill_manual(values = paint_palette("Ophelia"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-33-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-35-1.png" width="100%" />

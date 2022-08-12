@@ -7,3 +7,4 @@
 img/
 ^cran-comments.md$
 ^revdep$
+^CRAN-RELEASE$

@@ -1,8 +1,9 @@
-#' Complete list of palettes
+#' Complete List of Palettes
 #'
 #' Use \code{\link{paint_palette}} to construct palettes of desired length.
 #'
 #' @export
+#' @return List of palettes.
 painting_palettes <- list(
 
   "Pearlgirl" = c("#C35743", "#CDA66B", "#F3DFBA", "#9DB4C8", "#346893"),
@@ -20,7 +21,7 @@ painting_palettes <- list(
 
 )
 
-#' Paintings palette generator
+#' Paintings Palette Generator
 #'
 #' @param name Name of desired palette. Choice are:
 #'     \code{Pearlgirl}, \code{Splash}, \code{Autumn},
@@ -64,12 +65,12 @@ paint_palette <- function(name, n, type = c("discrete", "continuous")) {
 
 }
 
-#' Display all palettes
+#' Display All Available Palettes
 #'
 #' @param n Number of palettes to display. All palettes will be displayed in default
 #'
+#' @return No return value, called for displaying all available palettes.
 #' @export
-#'
 #' @examples
 #' display_all_palettes()
 display_all_palettes <- function(n=NULL) {
@@ -86,16 +87,16 @@ display_all_palettes <- function(n=NULL) {
 
 }
 
+#' Print Palettes
 #' @export
+#' @return No return value, called for printing palette.
 #' @importFrom graphics rect par image text
 #' @importFrom grDevices rgb
 print.palette <- function(x, ...) {
   n <- length(x)
-
-  old <- par(mar = c(0.5, 0.5, 0.5, 0.5))
-
+  old <- par(no.readonly = TRUE)
   on.exit(par(old))
-
+  par(mar = c(0.5, 0.5, 0.5, 0.5))
   image(x = 1:n,
         y = 1,
         z = as.matrix(1:n),

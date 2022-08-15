@@ -16,7 +16,7 @@ There were no ERRORs, WARNINGs or NOTEs.
 >
 > display_all_palettes.Rd: \\value
 
-Added return value descriptions for all exported functions.
+Added return value descriptions for `display_all_palettes`.
 
 > Please make sure that you do not change the user's options, par or working directory. If you really have to do so within functions, please ensure with an \*immediate\* call of on.exit() that the settings are reset when the function is exited. e.g.:
 >
@@ -34,4 +34,15 @@ Added return value descriptions for all exported functions.
 >
 > e.g.: R/colors.R
 
-Fixed as suggested.
+The function `print.palette` is designed to print the `palette` object. And it seems to have no effect to the margin after called.
+
+```{r}
+library(paintingr)
+par('mar')
+# [1] 5.1 4.1 4.1 2.1
+print(paint_palette('Pearlgirl'))
+par('mar')
+# [1] 5.1 4.1 4.1 2.1
+```
+
+Also, this snippet (line 94-96 of R/color.R) is referred to the package `wesanderson` (<https://github.com/karthik/wesanderson/blob/master/R/colors.R#L87-L89>).

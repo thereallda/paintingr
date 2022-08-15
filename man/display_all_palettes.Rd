@@ -2,15 +2,18 @@
 % Please edit documentation in R/colors.R
 \name{display_all_palettes}
 \alias{display_all_palettes}
-\title{Display all palettes}
+\title{Display All Available Palettes}
 \usage{
 display_all_palettes(n = NULL)
 }
 \arguments{
 \item{n}{Number of palettes to display. All palettes will be displayed in default}
 }
+\value{
+No return value, called for displaying all available palettes.
+}
 \description{
-Display all palettes
+Display All Available Palettes
 }
 \examples{
 display_all_palettes()

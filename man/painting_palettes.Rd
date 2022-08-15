@@ -3,7 +3,7 @@
 \docType{data}
 \name{painting_palettes}
 \alias{painting_palettes}
-\title{Complete list of palettes}
+\title{Complete List of Palettes}
 \format{
 An object of class \code{list} of length 12.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/colors.R
 \name{paint_palette}
 \alias{paint_palette}
-\title{Paintings palette generator}
+\title{Paintings Palette Generator}
 \usage{
 paint_palette(name, n, type = c("discrete", "continuous"))
 }
@@ -22,7 +22,7 @@ interpolate between colors if you want more colors.}
 A vector of colors.
 }
 \description{
-Paintings palette generator
+Paintings Palette Generator
 }
 \examples{
 paint_palette("Ophelia")

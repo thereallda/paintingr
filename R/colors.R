@@ -74,20 +74,6 @@ paint_palette <- function(name, n, type = c("discrete", "continuous")) {
 #' display_all_palettes()
 display_all_palettes <- function(n=NULL) {
 
-  # helper function for aligning multiple palettes in one plot
-  # only use inside `display_all_palettes`
-  plot_pal <- function(x) {
-    n <- length(x)
-    # margins are only be changed inside the `display_all_palettes`
-    # and will be reset when `display_all_palettes` exits
-    par(mar = c(0.5, 0.5, 0.5, 0.5))
-    image(x = 1:n, y = 1, z = as.matrix(1:n),
-          col = x, ylab = "", xaxt = "n", yaxt = "n", bty = "n")
-    rect(xleft = 0, ybottom = 0.9, xright = n + 1, ytop = 1.1,
-         col = rgb(1, 1, 1, 0.8), border = NA)
-    text(x = (n + 1) / 2, y = 1, labels = attr(x, "name"), cex = 1.5, family = "sans")
-  }
-
   # default display all palettes
   if (is.null(n)) {
     n <- length(painting_palettes)
@@ -99,7 +85,18 @@ display_all_palettes <- function(n=NULL) {
 
   par(mfrow=c(n,1))
   for (x in names(painting_palettes)[1:n]) {
-    plot_pal(paint_palette(x))
+
+    paint.pal <- paint_palette(x)
+    n.color <- length(paint.pal)
+    # margins are only changed inside the `display_all_palettes`
+    # and will be reset when `display_all_palettes` exits
+    par(mar = c(0.5, 0.5, 0.5, 0.5))
+    image(x = 1:n.color, y = 1, z = as.matrix(1:n.color),
+          col = paint.pal, ylab = "", xaxt = "n", yaxt = "n", bty = "n")
+    rect(xleft = 0, ybottom = 0.9, xright = n.color + 1, ytop = 1.1,
+         col = rgb(1, 1, 1, 0.8), border = NA)
+    text(x = (n.color + 1) / 2, y = 1, labels = attr(paint.pal, "name"), cex = 1.5, family = "sans")
+
   }
 }
 

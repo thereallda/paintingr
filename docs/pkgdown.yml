@@ -1,0 +1,9 @@
+pandoc: 2.19.2
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles: {}
+last_built: 2022-10-23T09:08Z
+urls:
+  reference: https://thereallda.github.io/paintingr/reference
+  article: https://thereallda.github.io/paintingr/articles
+

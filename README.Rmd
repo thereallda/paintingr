@@ -1,5 +1,7 @@
 ---
-output: github_document
+output:   
+  md_document:
+    pandoc_args: ["--wrap=preserve"]
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -28,7 +30,6 @@ Color is one of the most important attributes of a figure. Dedicated choice of c
 The goal of `paintingr` is to provide a set of palettes from paintings.
 
 Structure of the package was based on coding from the [wesanderson](https://github.com/karthik/wesanderson) packages.
-
 
 ## Installation
 
@@ -251,6 +252,37 @@ plot(paint,axes=FALSE,xlab="",ylab="")
 paint_palette("Vesuvius")
 ```
 
+### Sunset
+
+Sunset at Grace, Orange and Violet Sky - Felix Edouard Vallotton (1918), [Source](https://arthur.io/art/felix-edouard-vallotton/sunset-at-grace-orange-and-violet-sky)
+
+```{r, eval=FALSE}
+paint_palette("Sunset")
+```
+
+```{r, echo=FALSE}
+paint <- load.image("img/sunset.jpg")
+par(mai=rep(0,4))
+layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
+plot(paint,axes=FALSE,xlab="",ylab="")
+paint_palette("Sunset")
+```
+
+### Caront
+
+Caront - Guim Tió Zarraluki (2019), [Source](https://www.instagram.com/guimtio/p/CqpSpcVNjNA/)
+
+```{r, eval=FALSE}
+paint_palette("Caront")
+```
+
+```{r, echo=FALSE}
+paint <- load.image("img/Guim1.jpg")
+par(mai=rep(0,4))
+layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
+plot(paint,axes=FALSE,xlab="",ylab="")
+paint_palette("Caront")
+```
 
 ## Examples
 
@@ -269,7 +301,7 @@ data <- expand.grid(X=x, Y=y)
 data$Z <- seq(1,20)+runif(400, 0, 5)
 
 # Heatmap 
-pal <- paint_palette("Autumn", n=100, type="continuous")
+pal <- paint_palette("Sunset", n=100, type="continuous")
 ggplot(data, aes(X, Y, fill= Z)) + 
   geom_tile() + 
   scale_fill_gradientn(colours = pal) + 
@@ -299,7 +331,7 @@ ggplot(iris, aes(Species, Sepal.Length)) +
   geom_boxplot(aes(fill = Species)) +
   theme_classic() +
   theme(legend.position = "top") +
-  scale_fill_manual(values = paint_palette("Villeneuve"))
+  scale_fill_manual(values = paint_palette("Pearlgirl"))
 ```
 
 ### Scatter
@@ -310,7 +342,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
   geom_point(aes(color = Species)) +
   theme_classic() +
   theme(legend.position = "top") +
-  scale_color_manual(values = paint_palette("Kitchen"))
+  scale_color_manual(values = paint_palette("Caront"))
 ```
 
 ### Violin plot
@@ -321,7 +353,7 @@ data(mpg)
 ggplot(mpg, aes(x=class, y=hwy, fill=class)) + 
   geom_violin() +
   theme_classic() +
-  scale_fill_manual(values = c(paint_palette("Spring", n=6), "black"))
+  scale_fill_manual(values = c(paint_palette("Twilight", type = "continuous", n=7)))
 ```
 
 ### Barplot
@@ -330,5 +362,5 @@ ggplot(mpg, aes(x=class, y=hwy, fill=class)) +
 ggplot(mpg, aes(x = class, fill = drv)) + 
   geom_bar() +
   theme_classic() +
-  scale_fill_manual(values = paint_palette("Ophelia"))
+  scale_fill_manual(values = paint_palette("Seascape"))
 ```

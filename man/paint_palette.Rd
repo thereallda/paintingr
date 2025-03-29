@@ -11,7 +11,8 @@ paint_palette(name, n, type = c("discrete", "continuous"))
 \code{Pearlgirl}, \code{Splash}, \code{Autumn},
 \code{Villeneuve}, \code{Ophelia}, \code{Kitchen},
 \code{Spring}, \code{Strawberries}, \code{Seascape},
-\code{Twilight}, \code{Abstract}, \code{Vesuvius}}
+\code{Twilight}, \code{Abstract}, \code{Vesuvius},
+\code{Montfoort}}
 
 \item{n}{Number of colors you want.}
 

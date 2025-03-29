@@ -16,7 +16,9 @@ painting_palettes <- list(
   "Seascape" = c("#114A79", "#4086AF", "#AFD2E0", "#ADCABB", "#689C9A"),
   "Twilight" = c("#13559F", "#599AB7", "#A9C4B4", "#FFCC48", "#DF832C", "#A83C1E"),
   "Abstract" = c("#211F1E", "#57575C", "#A9A9A0", "#9D897D", "#9E8553"),
-  "Vesuvius" = c("#000000","#191919","#C35743","#FEB24C")
+  "Vesuvius" = c("#000000","#191919","#C35743","#FEB24C"),
+  "Sunset" =  c("#000004",'#4C2E7A',"#6F266D",'#BC5882','#D06E65','#D06E65','#EEEB89'),
+  "Caront" = c("#1c4e57","#116a7b","#c2dedc","#ece5c7","#c29651","#6e4236")
 
 )
 
@@ -26,7 +28,8 @@ painting_palettes <- list(
 #'     \code{Pearlgirl}, \code{Splash}, \code{Autumn},
 #'     \code{Villeneuve}, \code{Ophelia}, \code{Kitchen},
 #'     \code{Spring}, \code{Strawberries}, \code{Seascape},
-#'     \code{Twilight}, \code{Abstract}, \code{Vesuvius}
+#'     \code{Twilight}, \code{Abstract}, \code{Vesuvius},
+#'     \code{Montfoort}
 #'
 #' @param n Number of colors you want.
 #'

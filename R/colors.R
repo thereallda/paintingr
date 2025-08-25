@@ -18,7 +18,8 @@ painting_palettes <- list(
   "Abstract" = c("#211F1E", "#57575C", "#A9A9A0", "#9D897D", "#9E8553"),
   "Vesuvius" = c("#000000","#191919","#C35743","#FEB24C"),
   "Sunset" =  c("#000004",'#4C2E7A',"#6F266D",'#BC5882','#D06E65','#D06E65','#EEEB89'),
-  "Caront" = c("#1c4e57","#116a7b","#c2dedc","#ece5c7","#c29651","#6e4236")
+  "Caront" = c("#1c4e57","#116a7b","#c2dedc","#ece5c7","#c29651","#6e4236"),
+  "Starrynight" = c("#1f2e40","#3a4485","#3d77ac","#7697b2","#f8f7fb","#e3cf8e","#cfae2b","#b57f2b","#9c6b28")
 
 )
 

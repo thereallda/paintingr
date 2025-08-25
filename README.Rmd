@@ -238,14 +238,14 @@ paint_palette("Abstract")
 
 ### Vesuivus
 
-Vesuvius in Eruption - Joseph Wright of Derby (1776-1780), [Source](https://www.bl.uk/collection-items/vesuvius-in-eruption)
+Vesuvius in Eruption - Joseph Wright (1776-1780), [Source](https://www.bl.uk/collection-items/vesuvius-in-eruption)
 
 ```{r, eval=FALSE}
 paint_palette("Vesuvius")
 ```
 
 ```{r, echo=FALSE}
-paint <- load.image("img/Vesuvius_in_Eruption.jpg")
+paint <- load.image("img/Vesuvius_in_Eruption.jpeg")
 par(mai=rep(0,4))
 layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
 plot(paint,axes=FALSE,xlab="",ylab="")
@@ -284,6 +284,22 @@ plot(paint,axes=FALSE,xlab="",ylab="")
 paint_palette("Caront")
 ```
 
+### Starrynight
+
+*The Starry Night* - Vincent van Gogh (1889), [Source](https://www.moma.org/collection/works/79802)
+
+```{r, eval=FALSE}
+paint_palette("Starrynight")
+```
+
+```{r, echo=FALSE}
+paint <- load.image("img/thestarrynight.jpeg")
+par(mai=rep(0,4))
+layout(matrix(c(1,1,2,2),byrow = TRUE), heights=c(6,1))
+plot(paint,axes=FALSE,xlab="",ylab="")
+paint_palette("Starrynight")
+```
+
 ## Examples
 
 `ggplot2`-based examples
@@ -311,11 +327,20 @@ ggplot(data, aes(X, Y, fill= Z)) +
 ```
 
 ```{r}
-# Heatmap with palette of "Vesuvius" 
-pal2 <- paint_palette("Vesuvius", n=100, type="continuous")
+# Heatmap with palette of "Starrynight" 
 ggplot(data, aes(X, Y, fill= Z)) + 
   geom_tile() + 
-  scale_fill_gradientn(colours = pal2) + 
+  scale_fill_gradientn(colours = paint_palette("Starrynight", n=100, type="continuous")) + 
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) + 
+  coord_equal() 
+```
+
+```{r}
+# Heatmap with palette of "Vesuvius" 
+ggplot(data, aes(X, Y, fill= Z)) + 
+  geom_tile() + 
+  scale_fill_gradientn(colours = paint_palette("Vesuvius", n=100, type="continuous")) + 
   scale_x_discrete(expand = c(0, 0)) +
   scale_y_discrete(expand = c(0, 0)) + 
   coord_equal() 

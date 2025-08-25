@@ -126,7 +126,7 @@ Abstract Composition - Jessica Dismorr (1915), [Source](https://www.tate.org.uk/
 
 ### Vesuivus
 
-Vesuvius in Eruption - Joseph Wright of Derby (1776-1780), [Source](https://www.bl.uk/collection-items/vesuvius-in-eruption)
+Vesuvius in Eruption - Joseph Wright (1776-1780), [Source](https://www.bl.uk/collection-items/vesuvius-in-eruption)
 
     paint_palette("Vesuvius")
 
@@ -147,6 +147,14 @@ Caront - Guim Tió Zarraluki (2019), [Source](https://www.instagram.com/guimtio/
     paint_palette("Caront")
 
 <img src="man/figures/README-unnamed-chunk-33-1.png" width="100%" />
+
+### Starrynight
+
+*The Starry Night* - Vincent van Gogh (1889), [Source](https://www.moma.org/collection/works/79802)
+
+    paint_palette("Starrynight")
+
+<img src="man/figures/README-unnamed-chunk-35-1.png" width="100%" />
 
 ## Examples
 
@@ -172,18 +180,27 @@ Use `type="continuous"` to automatically interpolate between colors if you want 
       scale_y_discrete(expand = c(0, 0)) + 
       coord_equal() 
 
-<img src="man/figures/README-unnamed-chunk-34-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-36-1.png" width="100%" />
 
-    # Heatmap with palette of "Vesuvius" 
-    pal2 <- paint_palette("Vesuvius", n=100, type="continuous")
+    # Heatmap with palette of "Starrynight" 
     ggplot(data, aes(X, Y, fill= Z)) + 
       geom_tile() + 
-      scale_fill_gradientn(colours = pal2) + 
+      scale_fill_gradientn(colours = paint_palette("Starrynight", n=100, type="continuous")) + 
       scale_x_discrete(expand = c(0, 0)) +
       scale_y_discrete(expand = c(0, 0)) + 
       coord_equal() 
 
-<img src="man/figures/README-unnamed-chunk-35-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-37-1.png" width="100%" />
+
+    # Heatmap with palette of "Vesuvius" 
+    ggplot(data, aes(X, Y, fill= Z)) + 
+      geom_tile() + 
+      scale_fill_gradientn(colours = paint_palette("Vesuvius", n=100, type="continuous")) + 
+      scale_x_discrete(expand = c(0, 0)) +
+      scale_y_discrete(expand = c(0, 0)) + 
+      coord_equal() 
+
+<img src="man/figures/README-unnamed-chunk-38-1.png" width="100%" />
 
 ### Boxplot
 
@@ -196,7 +213,7 @@ Use `type="continuous"` to automatically interpolate between colors if you want 
       theme(legend.position = "top") +
       scale_fill_manual(values = paint_palette("Pearlgirl"))
 
-<img src="man/figures/README-unnamed-chunk-36-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-39-1.png" width="100%" />
 
 ### Scatter
 
@@ -207,7 +224,7 @@ Use `type="continuous"` to automatically interpolate between colors if you want 
       theme(legend.position = "top") +
       scale_color_manual(values = paint_palette("Caront"))
 
-<img src="man/figures/README-unnamed-chunk-37-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-40-1.png" width="100%" />
 
 ### Violin plot
 
@@ -218,7 +235,7 @@ Use `type="continuous"` to automatically interpolate between colors if you want 
       theme_classic() +
       scale_fill_manual(values = c(paint_palette("Twilight", type = "continuous", n=7)))
 
-<img src="man/figures/README-unnamed-chunk-38-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-41-1.png" width="100%" />
 
 ### Barplot
 
@@ -227,4 +244,4 @@ Use `type="continuous"` to automatically interpolate between colors if you want 
       theme_classic() +
       scale_fill_manual(values = paint_palette("Seascape"))
 
-<img src="man/figures/README-unnamed-chunk-39-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-42-1.png" width="100%" />

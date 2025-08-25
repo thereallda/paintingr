@@ -1,11 +1,11 @@
 Package: paintingr
 Title: Painting Palettes Generator
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person(given = "Dean",
            family = "Li",
            role = c("aut", "cre"),
-           email = "lida@sioc.ac.cn")
+           email = "lideanlda@gmail.com")
 Description: Color palettes generated from paintings.
 License: MIT + file LICENSE
 Encoding: UTF-8
